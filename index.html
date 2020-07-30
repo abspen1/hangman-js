@@ -3,28 +3,30 @@
     <head>
         <meta charset="utf-8">
         <title>Hangman Game</title>
-        <link rel="sylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header>
             <h1>Hangman</h1>
         </header>
-
-        <div class="letter-dashes">
-            <span id="dashes">_ _ _ _ _</span>
-        </div>
-        <div class="alphabet">
-            <div id="used-box" class="badge">Letters Guessed</div>
-            <span id="used-letters">null</span>
-        </div>
-
+        <a href="">New Game</a>
+        <!-- <span id="give-up">Give UP</span> -->
         <div class="result">
-            <p>Let's Play!</p>
+            <p>Guess a letter!</p>
+        </div>
+        <div class="hangman">
+            
+            <div class="hang" id="h">
+                <img src="images/hang.png" alt="">
+            </div>
+            <div class="letter-dashes">
+                <span id="dashes">_ _ _ _ _ _ _ _ _ _</span>
+            </div>
+        </div>
+
         </div>
         
         <div class="choices">
-            <div id="unused-box" class="badge">Letters</div>
-
             <div class="choice" id= "a">
                 <span>A</span>
             </div>
@@ -105,12 +107,6 @@
             </div>
         </div>
 
-        <div class="hangman">
-            <div class="hang" id = "h">
-                <img src="images/hang.png" alt="">
-            </div>
-        </div>
-        <p id="action-message">Guess a letter!</p>
         <script src="app.js" charset="utf-8"></script>
     </body>
 </html>
