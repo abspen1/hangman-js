@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hangman Game</title>
+        <link rel="sylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Hangman</h1>
+        </header>
+
+        <div class="letter-dashes">
+            <span id="dashes">_ _ _ _ _</span>
+        </div>
+        <div class="alphabet">
+            <div id="used-box" class="badge">Letters Guessed</div>
+            <span id="used-letters">null</span>
+        </div>
+
+        <div class="result">
+            <p>Let's Play!</p>
+        </div>
+        
+        <div class="choices">
+            <div id="unused-box" class="badge">Letters</div>
+
+            <div class="choice" id= "a">
+                <span>A</span>
+            </div>
+            <div class="choice" id="b">
+                <span>B</span>
+            </div>
+            <div class="choice" id="c">
+                <span>C</span>
+            </div>
+            <div class="choice" id="d">
+                <span>D</span>
+            </div>
+            <div class="choice" id="e">
+                <span>E</span>
+            </div>
+            <div class="choice" id="f">
+                <span>F</span>
+            </div>
+            <div class="choice" id="g">
+                <span>G</span>
+            </div>
+            <div class="choice" id="h">
+                <span>H</span>
+            </div>
+            <div class="choice" id="i">
+                <span>I</span>
+            </div>
+            <div class="choice" id="j">
+                <span>J</span>
+            </div>
+            <div class="choice" id="k">
+                <span>K</span>
+            </div>
+            <div class="choice" id="l">
+                <span>L</span>
+            </div>
+            <div class="choice" id="m">
+                <span>M</span>
+            </div>
+            <div class="choice" id="n">
+                <span>N</span>
+            </div>
+            <div class="choice" id="o">
+                <span>O</span>
+            </div>
+            <div class="choice" id="p">
+                <span>P</span>
+            </div>
+            <div class="choice" id="q">
+                <span>Q</span>
+            </div>
+            <div class="choice" id="r">
+                <span>R</span>
+            </div>
+            <div class="choice" id="s">
+                <span>S</span>
+            </div>
+            <div class="choice" id="t">
+                <span>T</span>
+            </div>
+            <div class="choice" id="u">
+                <span>U</span>
+            </div>
+            <div class="choice" id="v">
+                <span>V</span>
+            </div>
+            <div class="choice" id="w">
+                <span>W</span>
+            </div>
+            <div class="choice" id="x">
+                <span>X</span>
+            </div>
+            <div class="choice" id="y">
+                <span>Y</span>
+            </div>
+            <div class="choice" id="z">
+                <span>Z</span>
+            </div>
+        </div>
+
+        <div class="hangman">
+            <div class="hang" id = "h">
+                <img src="images/hang.png" alt="">
+            </div>
+        </div>
+        <p id="action-message">Guess a letter!</p>
+    </body>
+</html>
