@@ -7,9 +7,9 @@ I'd like to think that I thought about everything when building this application
 ## Possible Improvements
 **JavaScript**
 * Currently hardcoding the word bank..
- * I tried using the random-words module but it doesn't work in browser.
- * Could maybe look into a dictionary website that has API and would let me pull words
- * Also could create a text file of some kind with long list of words
+     * I tried using the random-words module but it doesn't work in browser.
+     * Could maybe look into a dictionary website that has API and would let me pull words
+     * Also could create a text file of some kind with long list of words
 
 **CSS**
 * The design could use a little touch up
