@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: solid white;
+}
+
+header {
+    background: #24272e;
+    padding: 20px;
+}
+
+header > h1 {
+    color: red;
+    text-align: center;
+}
