@@ -16,3 +16,12 @@ I'd like to think that I thought about everything when building this application
 * I'm sure this code is messy since I'm not that comfortable with CSS
 * I probably have some unecessary code as well
 * Should try buffing my knowledge about CSS and then coming back to this
+
+
+# Screenshots
+
+![Alt text](/images/starting-screen.png?raw=true "Starting Screen")
+
+![Alt text](/images/winning-screen.png?raw=true "Winning Screen")
+
+![Alt text](/images/losing-screen.png?raw=true "Losing Screen")
