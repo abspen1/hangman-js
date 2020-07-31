@@ -338,8 +338,7 @@ function game(userChoice) {
                 changeImage(wrongGuess, userChoice)
             }
             else if (guessesLeft === 0) {
-                strFontRed = "You ran out of guesses! I'll finish the word for you."
-                result_p.innerHTML = "You ran out of guesses! I'll finish the word for you.".fontcolor("red")
+                result_p.innerHTML = "You ran out of guesses! Play again!".fontcolor("red")
                 endGame()
                 hangImage_src.src = "images/end.png"
             }
