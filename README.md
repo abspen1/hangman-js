@@ -20,8 +20,8 @@ I'd like to think that I thought about everything when building this application
 
 # Screenshots
 
-![Alt text](/images/starting-screen.png?raw=true "Starting Screen")
+![Alt text](/Users/austinspencer/Documents/images/starting-screen.png?raw=true "Starting Screen")
 
-![Alt text](/images/winning-screen.png?raw=true "Winning Screen")
+![Alt text](/Users/austinspencer/Documents/images/winning-screen.png?raw=true "Winning Screen")
 
-![Alt text](/images/losing-screen.png?raw=true "Losing Screen")
+![Alt text](/Users/austinspencer/Documents/images/losing-screen.png?raw=true "Losing Screen")
