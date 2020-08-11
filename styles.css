@@ -18,6 +18,19 @@ header > h1 {
     text-align: center;
 }
 
+.new-game {
+   text-align: left;
+}
+
+.newGame {
+    color: red;
+}
+
+.newGame:hover {
+    cursor: pointer;
+    color: rgb(114, 5, 5);
+}
+
 .giveUp {
    text-align: left;
 }

@@ -253,6 +253,7 @@ const result_p = document.querySelector(".result > p")
 const dashes_span = document.getElementById("dashes")
 var hangImage_src = document.getElementById("myImage")
 const giveUp_span = document.getElementById("quit")
+const newGame_span = document.getElementById("new")
 let endGameBool = false
 let winGameBool = false
 
@@ -383,6 +384,12 @@ function main() {
         endGame()
     })
     }
+    newGame_span.addEventListener('click', function () {
+        result_p.innerHTML = `Let's Play! There are ${wordBank.length} words in our word bank.`
+        console.log(getWord())
+        setCorrectGuess()
+        setupGame()
+    })
 }
 
 main()
