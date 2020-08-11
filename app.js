@@ -39,7 +39,7 @@ let wordBank = [
     'WORKER', 'GOOSE', 'LIGHT', 'ANYTHING',
     'TRUNK', 'SERVE', 'STUDIED', 'CONTAIN',
     'FINALLY', 'LABEL', 'SUBSTANCE', 'LATER',
-    'SILLY', 'PUTTING', 'SWEET', 'RAISE',
+    'PUTTING', 'SWEET', 'RAISE', 'SILLY',
     'FROZEN', 'SEASON', 'FOREST', 'OUTLINE',
     'ANIMAL', 'GOOSE', 'POUND', 'SHINNING',
     'CLEAN', 'DRESS', 'OLDEST', 'QUEEN',
@@ -161,7 +161,7 @@ let wordBank = [
     'PERIOD', 'SCORE', 'ABOUT', 'PARTICLES',
     'WHISPERED', 'QUIETLY', 'DESIGN', 'STORE', 'WORSE', 'QUEEN', 'WROTE', 'AIRPLANE',
     'REMOVE', 'MENTAL', 'FREEDOM', 'SEASON',
-    'SOCIETY', 'TYPICAL', 'SILLY', 'TALES',
+    'SOCIETY', 'TYPICAL', 'TALES',
     'CUTTING', 'EXIST', 'QUIETLY', 'GLOBE',
     'DEPTH', 'WHEEL', 'WHEEL', 'ZEBRA',
     'SCENE', 'UNDER', 'TELEPHONE', 'EVERYONE',
@@ -192,7 +192,7 @@ let wordBank = [
     'ACCURATE', 'NOISE', 'ANGLE', 'SUNLIGHT',
     'ANCIENT', 'POUND', 'THUMB', 'QUIETLY',
     'ANYTHING', 'LIKELY', 'MOUTH', 'EXCITEMENT',
-    'LARGE', 'SILLY', 'WRITTEN', 'GARDEN', 'CAPTURED', 'BASIC',
+    'LARGE', 'WRITTEN', 'GARDEN', 'CAPTURED', 'BASIC',
     'GRAIN', 'WHALE', 'BURST', 'COLUMN',
     'IMPROVE', 'GOOSE', 'DOZEN', 'OFFICIAL',
     'MANUFACTURING', 'THESE', 'WORSE', 'PEACE',
@@ -252,6 +252,8 @@ const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M
 const result_p = document.querySelector(".result > p")
 const dashes_span = document.getElementById("dashes")
 var hangImage_src = document.getElementById("myImage")
+const giveUp_span = document.getElementById("quit")
+const newGame_span = document.getElementById("new")
 let endGameBool = false
 let winGameBool = false
 
@@ -261,6 +263,10 @@ function winGame() {
     strFont = "You Won! Nice Job!"
     result_p.innerHTML = strFont.fontcolor("green")
     alphabet.forEach(letter => document.getElementById(letter).innerHTML = "_ ")
+}
+
+resetBoard = () => {
+    alphabet.forEach(letter => document.getElementById(letter).innerHTML = letter)
 }
 
 
@@ -296,6 +302,11 @@ function checkInWord(userChoice) {
     return false 
 }
 
+function resetImage() {
+    let filePath = "images/hang.png"
+    hangImage_src.src = filePath
+}
+
 
 function changeImage(wrongGuess) {
     let filePath = "images/hang" + wrongGuess.toString() + ".png"
@@ -316,6 +327,7 @@ function endGame() {
     dashes_span.innerHTML = outputs
     endGameBool = true
     alphabet.forEach(letter => document.getElementById(letter).innerHTML = "_ ")
+    result_p.innerHTML = "You're a quitter! Try again though."
 }
 
 
@@ -327,7 +339,7 @@ function game(userChoice) {
             return
         } else {
             letter_span.innerHTML = "_"
-        } 
+        }
         if (checkInWord(userChoice)) {
             return
         } else {
@@ -368,15 +380,27 @@ function setCorrectGuess() {
     correctGuess = strConcat
 }
 
-function main() {
+init = () => {
     result_p.innerHTML = `Let's Play! There are ${wordBank.length} words in our word bank.`
     console.log(getWord())
     setCorrectGuess()
     setupGame()
+    resetBoard()
+    resetImage()
+    endGameBool = false
+    winGameBool = false
+    wrongGuess = 1
+}
+
+function main() {
+    init()
     if (!endGameBool && !winGameBool) {
     alphabet.forEach(letter => document.getElementById(letter).addEventListener('click', function () {
         game(letter)
     }))
+    giveUp_span.addEventListener('click', function () {
+        endGame()
+    })
     }
 }
 

@@ -18,6 +18,32 @@ header > h1 {
     text-align: center;
 }
 
+.new-game {
+   text-align: left;
+}
+
+.newGame {
+    color: red;
+}
+
+.newGame:hover {
+    cursor: pointer;
+    color: rgb(114, 5, 5);
+}
+
+.giveUp {
+   text-align: left;
+}
+
+.given {
+    color: red;
+}
+
+.given:hover {
+    cursor: pointer;
+    color: rgb(114, 5, 5);
+}
+
 .hangman {
     margin: 30px 0;
     text-align: left;
