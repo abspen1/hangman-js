@@ -265,6 +265,10 @@ function winGame() {
     alphabet.forEach(letter => document.getElementById(letter).innerHTML = "_ ")
 }
 
+resetBoard = () => {
+    alphabet.forEach(letter => document.getElementById(letter).innerHTML = letter)
+}
+
 
 function adjustBoard(array1, wordArray) {
     if (!endGameBool && !winGameBool){
@@ -296,6 +300,11 @@ function checkInWord(userChoice) {
         return true
     }
     return false 
+}
+
+function resetImage() {
+    let filePath = "images/hang.png"
+    hangImage_src.src = filePath
 }
 
 
@@ -330,7 +339,7 @@ function game(userChoice) {
             return
         } else {
             letter_span.innerHTML = "_"
-        } 
+        }
         if (checkInWord(userChoice)) {
             return
         } else {
@@ -371,11 +380,20 @@ function setCorrectGuess() {
     correctGuess = strConcat
 }
 
-function main() {
+init = () => {
     result_p.innerHTML = `Let's Play! There are ${wordBank.length} words in our word bank.`
     console.log(getWord())
     setCorrectGuess()
     setupGame()
+    resetBoard()
+    resetImage()
+    endGameBool = false
+    winGameBool = false
+    wrongGuess = 1
+}
+
+function main() {
+    init()
     if (!endGameBool && !winGameBool) {
     alphabet.forEach(letter => document.getElementById(letter).addEventListener('click', function () {
         game(letter)
@@ -384,12 +402,6 @@ function main() {
         endGame()
     })
     }
-    newGame_span.addEventListener('click', function () {
-        result_p.innerHTML = `Let's Play! There are ${wordBank.length} words in our word bank.`
-        console.log(getWord())
-        setCorrectGuess()
-        setupGame()
-    })
 }
 
 main()
