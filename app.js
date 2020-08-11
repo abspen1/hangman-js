@@ -252,6 +252,7 @@ const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M
 const result_p = document.querySelector(".result > p")
 const dashes_span = document.getElementById("dashes")
 var hangImage_src = document.getElementById("myImage")
+const giveUp_span = document.getElementById("quit")
 let endGameBool = false
 let winGameBool = false
 
@@ -316,6 +317,7 @@ function endGame() {
     dashes_span.innerHTML = outputs
     endGameBool = true
     alphabet.forEach(letter => document.getElementById(letter).innerHTML = "_ ")
+    result_p.innerHTML = "You're a quitter! Try again though."
 }
 
 
@@ -377,6 +379,9 @@ function main() {
     alphabet.forEach(letter => document.getElementById(letter).addEventListener('click', function () {
         game(letter)
     }))
+    giveUp_span.addEventListener('click', function () {
+        endGame()
+    })
     }
 }
 
