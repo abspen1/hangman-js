@@ -1,3 +1,5 @@
+const randomWords = require('random-words')
+
 let word = ""
 let correctGuess
 let correctArray = []
@@ -154,7 +156,7 @@ function setCorrectGuess() {
 }
 
 init = () => {
-    result_p.innerHTML = `Let's Play! There are ${wordBank.length} words in our word bank.`
+    result_p.innerHTML = `Let's Play!`
     console.log(getWord())
     setCorrectGuess()
     setupGame()
